@@ -1,0 +1,8 @@
+Task List:
+
+Create a repository for software engineering project.
+Understand fork function in c. 
+Review software engineering Chapter Two.
+Complete lab 3 of Operating Systems. 
+Review Inheritance and instance variables in Java Object Oriented.
+Borrow data structures in java and agile management development from library.
