@@ -6,3 +6,4 @@ Review software engineering Chapter Two.
 Complete lab 3 of Operating Systems. 
 Review Inheritance and instance variables in Java Object Oriented.
 Borrow data structures in java and agile management development from library.
+I think i forgot something ....something to do with Rooms and aircondition and coolignsystem.
