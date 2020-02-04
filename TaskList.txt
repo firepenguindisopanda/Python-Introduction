@@ -9,5 +9,5 @@ Borrow data structures in java and agile management development from library.
 I think i forgot something ....something to do with Rooms and aircondition and coolignsystem.
 I remember..... actually no I forgot. Dammit ummm look up GitHub Student Developer Pack.
 Develope user cases for software engineering.
-start comp2604 assignment 1 Due date:
+start comp2604 assignment 1 Due date: 17th February 2020.
 start comp2603 assignment 1 Due date:
