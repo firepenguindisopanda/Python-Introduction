@@ -1,2 +1,2 @@
-# Introduction
-Basic introduction for learning github
+# Introduction to chatbot with python!
+Basic introduction for learning python by creating a chatbot!
