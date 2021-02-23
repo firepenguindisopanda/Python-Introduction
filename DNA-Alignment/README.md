@@ -10,6 +10,9 @@ Consider T = ACACGAAC, and let P = {AC, GA}. The pattern AC occurs at positions 
 and 6 in T, and the pattern GA occurs at position 4 in T.
 
 # Content Information
+* Input comprises two files: dna.txt and patterns.txt. 
+* The first file, dna.txt contains the DNA sequence for referencing T on a single line. 
+* The second file contains several DNA sequences, each on a separate line
 * Main.py is the only one that has code at the moment.
 * Run in IDLE, will produce a text file called solutions.txt
 * This program finds all occurences of a set of patterns called P in, located in patterns.txt, in a long pattern called T, located in dna.txt
