@@ -1,3 +1,5 @@
+#Layout of a QuadraticProbing Object
+#Methods and variables the object has access to when instantiated.
 class QuadraticProbing:
     def __init__(self, n):
         self.table = [None] * n
