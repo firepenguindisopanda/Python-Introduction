@@ -4,6 +4,9 @@ class QuadraticProbing:
     def __init__(self, n):
         self.table = [None] * n
         self.n = n
+        
+    #This method uses QuadraticProbing algorithm to insert a key, value pair into a hash table and resolves collisions.    
+    #Uses the function hash() on the key variable 
     def insert(self, key, value):
         i = hash(key) % self.n
         misses = 0
@@ -12,7 +15,9 @@ class QuadraticProbing:
             misses += 1
             i_prime = (i+(misses*misses)) % self.n
         self.table[i_prime] = (key, value)
-
+        
+    #Returns the value from the hashtable that corresponds to the key variable passed in the parameter
+    #Return None if the key doesn't exist
     def search(self, key):
         i = hash(key) % self.n
         misses = 0
@@ -24,10 +29,13 @@ class QuadraticProbing:
             misses += 1
             i_prime = (i + (misses*misses)) % self.n
         return None
+        
+    #Removes the value of the corresponding key
     def delete(self, key):
         i = hash(key) % self.n
         misses = 0
         i_prime = (i + (misses*misses)) % self.n
+        
         while self.table[i_prime] is not None:
             k_prime, v_prime = self.table[i_prime]
             if k_prime == key:
@@ -44,7 +52,7 @@ class QuadraticProbing:
             i_prime = (i + (curr*curr)) % self.n
                 
 
-    
+#Beginning of setting variables
 t = 500 #assume that T is no longer than 500 characters each
 p = 11 #assume that p is no longer than 10 characters each
 count = 0
@@ -79,6 +87,9 @@ over_limit = 0
 over_x = 0
 dtl = ()
 xl = ()
+#End of setting variables
+
+
 if dnatxtlength > 500:
     over_limit = dnatxtlength - 500
     over_limit = dnatxtlength - over_limit
