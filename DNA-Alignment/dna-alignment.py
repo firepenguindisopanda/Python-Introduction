@@ -102,6 +102,10 @@ if x > 10 :
     for px in range(over_x):
         xl[px] = patterns[px]
 
+#parses the information in each index of the lines array
+#enumerates each data from the array and puts it in a dictionary
+#Keys are the numbers
+#Values are the parsed data
 for l in range(len(lines)):
     wrd = lines[l]
     wrd = wrd.strip()
