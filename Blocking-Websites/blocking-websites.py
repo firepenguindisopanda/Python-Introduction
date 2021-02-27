@@ -1,3 +1,5 @@
+#Layout of a QuadraticProbing Object
+#Methods and variables the object has access to when instantiated.
 class QuadraticProbing:
     def __init__(self, n):
         self.table = [None] * n
@@ -41,6 +43,9 @@ class QuadraticProbing:
             misses += 1
             i_prime = (i + (curr*curr)) % self.n
 
+
+#Layout of a Set Object
+#Methods and variables the object has access to when instantiated.
 class Set:
     def __init__(self, size):
         self.table = [[]] * size
@@ -68,13 +73,17 @@ class Set:
                     return True
             return False
 
+#Opens the text files to perform operations on the data
 f_dns = open("dns.txt", "r")
 f_queries = open("queries.txt", "r")
 f_solutions = open("solutions.txt","w+")
 f_blacklist = open("blacklist.txt", "r")
 
+#Declare a dictionary to store the dns data read from the dns.txt file
 dns_dictionary = {}
+#Instantiates a QuadraticProbing object to store the data from dns_dictionary
 real_dns = QuadraticProbing(25)
+#Instantiates a Set Object to store the ip addresses
 ip_addresses = Set(11)
 for line in f_dns.readlines():
     dns_lines = line.split()
