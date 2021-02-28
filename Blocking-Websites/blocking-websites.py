@@ -85,18 +85,24 @@ dns_dictionary = {}
 real_dns = QuadraticProbing(25)
 #Instantiates a Set Object to store the ip addresses
 ip_addresses = Set(11)
+
+#Inserts the data from the dns.txt file into HashTable using QuadraticProbing technique for cases of collision
 for line in f_dns.readlines():
     dns_lines = line.split()
     dns_dictionary = dns_lines
     real_dns.insert(dns_dictionary[0], dns_dictionary[1])
         
 
-
+#Adds the data from the blacklist.txt file to the Set Object ip_addresses 
 for line in f_blacklist.readlines():
     blacklist_lines = line.strip()
     ip_addresses.add(blacklist_lines)
 
-
+#stores the data from the queries.txt file in query_line
+#pass query_line as a parameter for the search method that real_dns has acces to
+#If query_search is None, Writes N to solutions.txt file
+#check if the ip address that is in the ip address set
+#If True, write Y to solutions.txt file else write N to file
 for line in f_queries.readlines():
     query_line = line[0:-1]
     query_search = real_dns.search(query_line)
