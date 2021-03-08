@@ -17,4 +17,33 @@ Hashtable * initHT(int sizeTable){
 	}
 	return hash;
 }
+int hashCode(int sizeTable, string key){
+	int x, value = 0, ascii = 0;
+	int length = key.size();
+	for(x = 0; x < length; x++){
+		ascii = int(key[x]);
+		value = value + (ascii * x);
+	}
+	return value;
+}
 
+int containHT(Hashtable * ht, string key, int sizeTable){
+	int x, num = 0, d = 0, original = 0;
+	num = hashCode(sizeTable, key);
+	x = num % sizeTable;
+	if(ht->elements[x].pattern == key){
+		return ht->elements[x].pValue;
+	}
+	
+	original = x;
+	d = num % (sizeTable/2);
+	x = x + d;
+	while(x != original){	//while spot in hashtable is not empty
+		if(ht->elements[x].pattern == key){		//compare key to condition name to see if it matches ans return true
+			return ht->elements[x].pValue;
+			
+		}
+		x += d;
+	}
+	return -1;			//searched hashtable and key was not found
+}
